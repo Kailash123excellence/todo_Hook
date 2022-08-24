@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import useHooks from "../Hooks/useHooks";
 export default function AddForm(props) {
   const { input, setInput, todos, setTodos, editTodo, setEditTodo } = props;
-
   function updateTodo(title, id, completed) {
-    const newTodo = todos.map((todo, index) =>
+    const newTodo = todos.map((todo) =>
       todo.id === id ? { title, id, completed } : todo
     );
     setTodos(newTodo);
@@ -13,8 +13,6 @@ export default function AddForm(props) {
 
   function onInputChange(e) {
     setInput(e.target.value);
-    // console.log(input);
-    // console.log(todos);
   }
 
   function onFormSubmit(e) {
@@ -26,17 +24,11 @@ export default function AddForm(props) {
       updateTodo(input, editTodo.id, editTodo.completed);
     }
   }
-
-  useEffect(() => {
-    if (editTodo) {
-      setInput(editTodo.title);
-    } else {
-      setInput("");
-    }
-  }, [setInput, editTodo]);
+    useHooks(editTodo,setInput)
 
   return (
     <>
+
       <form onSubmit={(e) => onFormSubmit(e)}>
         <input
           type="text"
@@ -46,7 +38,7 @@ export default function AddForm(props) {
           required
           onChange={onInputChange}
         />
-        <button className="button_add">submit</button>
+        <button className="button_add">Add</button>
       </form>
     </>
   );

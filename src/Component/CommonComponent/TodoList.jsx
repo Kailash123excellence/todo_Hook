@@ -1,5 +1,5 @@
 import React from "react";
-import CompletedTask from "./CompletedTask";
+
 
 export default function TodoList(props) {
   const { todos, setTodos,setEditTodo } = props;
@@ -25,7 +25,6 @@ const handleComplete=(index)=>{
 
   const handleEdit=(index)=>{
     const findTodo= todos.find((todo,i)=>index===i)
-    
     setEditTodo(findTodo)
 
   }

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import AddForm from "./AddForm";
-import Header from "./Header";
-import TodoList from "./TodoList";
+import AddForm from "./CommonComponent/AddForm";
+import Header from "./CommonComponent/Header";
+import TodoList from "./CommonComponent/TodoList";
 
 export default function TodoApp() {
   const [input, setInput]= useState("")
