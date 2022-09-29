@@ -1,0 +1,74 @@
+.body {
+  background-color: rgb(210, 169, 115);
+}
+
+.container {
+  text-align: center;
+  background-color: rgb(207, 145, 207);
+  max-width: 80%;
+  margin: auto;
+}
+
+.Header {
+  text-align: center;
+  color: blue;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+.listHeading {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.button_add {
+  width: 60px;
+  height: 30px;
+  /* border-radius: 50%; */
+  /* padding: 6px; */
+}
+.todo-list {
+  color: red;
+  background-color: gray;
+}
+.todo-item {
+  display: flex;
+  justify-content: center;
+  background-color: aquamarine;
+}
+.list{
+  font-weight: bold;
+}
+.task-button{
+display: inline;
+flex-direction: row;
+}
+.button-completed{
+width:50px;
+}
+.button-edit{
+width:50px;
+}
+.button-delete{
+width:50px;
+}
+.task-input{
+  width: 30%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: bisque;
+}
+.task-input:hover{
+  width: 50%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: white;
+}
+.button_add{
+  width: 50px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 50px;
+  background-color: bisque;
+}
